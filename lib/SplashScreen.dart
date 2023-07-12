@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen>
         setState(() {});
       });
     controller.forward().then((_) {
-      navigationPage();
+      //navigationPage();
     });
   }
 
@@ -32,10 +32,10 @@ class _SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
-  void navigationPage() {
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (_) => WelcomeBackPage()));
-  }
+  // void navigationPage() {
+  //   Navigator.of(context)
+  //       //.pushReplacement(MaterialPageRoute(builder: (_) => WelcomeBackPage()));
+  // }
 
   Widget build(BuildContext context) {
     return Container(
