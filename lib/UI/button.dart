@@ -5,7 +5,7 @@ void main() {
     initialRoute: '/',
     routes: {
 
-      '/second': (context) => const Button(),
+      '/button': (context) => const Button(),
     },
   )); //MaterialApp
 }

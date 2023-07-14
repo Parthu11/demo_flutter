@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'decoration.dart';
 import 'button.dart';
 import 'scrollview.dart';
 
@@ -9,9 +10,10 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) => const Homepage(),
-      '/First': (context) => const SecondRoute(),
-      '/Second': (context) => const Button(),
-      '/Third': (context) => const Scroll(),
+      '/image': (context) => const SecondRoute(),
+      '/button': (context) => const Button(),
+      '/scroll': (context) => const Scroll(),
+      '/decoration' : (context) => const Decorat(),
     },
   )); //MaterialApp
 }
@@ -23,7 +25,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My First App'),
+        title: const Text('Flutter App'),
         backgroundColor: Colors.blueGrey,
       ), // AppBar
       body: Container(padding: EdgeInsets.all(15),
@@ -34,19 +36,25 @@ class Homepage extends StatelessWidget {
             ElevatedButton(
               child: const Text('Image'),
               onPressed: () {
-                Navigator.pushNamed(context, '/First');
+                Navigator.pushNamed(context, '/image');
               },
             ), // ElevatedButton
             ElevatedButton(
               child: const Text('Button'),
               onPressed: () {
-                Navigator.pushNamed(context, '/Second');
+                Navigator.pushNamed(context, '/button');
               },
             ), // ElevatedButton
             ElevatedButton(
               child: const Text('Scroll View'),
               onPressed:(){
-                Navigator.pushNamed((context), '/Third');
+                Navigator.pushNamed((context), '/scroll');
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Decoration'),
+              onPressed:(){
+                Navigator.pushNamed((context), '/decoration');
               },
             ),
           ],
